@@ -190,13 +190,13 @@ Fault LED   → GPIO 27
 
 ## 🏗️ System Architecture
 
-![BMS System Architecture](architecture_diagram.jpg)
+![BMS System Architecture](docs/architecture_diagram.jpg)
 
 ---
 
 ## 🔄 Operating Workflow
 
-![BMS Operating Workflow](workflow_diagram.jpg)
+![BMS Operating Workflow](docs/workflow_diagram.jpg)
 
 ---
 
