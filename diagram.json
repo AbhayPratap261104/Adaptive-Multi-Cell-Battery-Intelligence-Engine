@@ -3,27 +3,112 @@
   "author": "Abhay",
   "editor": "wokwi",
   "parts": [
-    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "cell1", "top": -193.3, "left": 297.4, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "cell2", "top": -78.1, "left": 297.4, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "cell3", "top": 40, "left": 300, "attrs": {} },
-    { "type": "wokwi-potentiometer", "id": "cell4", "top": 181.1, "left": 297.4, "attrs": {} }
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot1",
+      "top": -97.3,
+      "left": 278.2,
+      "attrs": { "value": "50" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot2",
+      "top": -100,
+      "left": 380,
+      "attrs": { "value": "50" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot3",
+      "top": -100,
+      "left": 480,
+      "attrs": { "value": "50" }
+    },
+    {
+      "type": "wokwi-potentiometer",
+      "id": "pot4",
+      "top": -100,
+      "left": 580,
+      "attrs": { "value": "50" }
+    },
+    {
+      "type": "wokwi-lcd1602",
+      "id": "lcd1",
+      "top": -280,
+      "left": 280,
+      "attrs": { "pins": "i2c" }
+    },
+    { "type": "wokwi-buzzer", "id": "bz1", "top": 120, "left": 700, "attrs": { "volume": "0.1" } },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": 220, "left": 700, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led_fault",
+      "top": 120,
+      "left": 800,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r_led",
+      "top": 150,
+      "left": 830,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text1",
+      "top": -124.8,
+      "left": 288,
+      "attrs": { "text": "CELL 1" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text2",
+      "top": -124.8,
+      "left": 393.6,
+      "attrs": { "text": "CELL 2" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text3",
+      "top": -124.8,
+      "left": 489.6,
+      "attrs": { "text": "CELL 3" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "text4",
+      "top": -124.8,
+      "left": 595.2,
+      "attrs": { "text": "CELL 4" }
+    }
   ],
   "connections": [
-    [ "cell1:SIG", "esp:34", "green", [] ],
-    [ "cell2:SIG", "esp:35", "green", [] ],
-    [ "cell3:SIG", "esp:32", "green", [] ],
-    [ "cell4:SIG", "esp:33", "green", [] ],
-    [ "cell1:VCC", "esp:3V3", "red", [] ],
-    [ "cell2:VCC", "esp:3V3", "red", [] ],
-    [ "cell3:VCC", "esp:3V3", "red", [] ],
-    [ "cell4:VCC", "esp:3V3", "red", [] ],
-    [ "cell1:GND", "esp:GND.1", "black", [] ],
-    [ "cell2:GND", "esp:GND.1", "black", [] ],
-    [ "cell3:GND", "esp:GND.1", "black", [] ],
-    [ "cell4:GND", "esp:GND.1", "black", [] ],
-    [ "esp:TX", "$serialMonitor:RX", "", [] ],
-    [ "esp:RX", "$serialMonitor:TX", "", [] ]
+    [ "esp:D34", "pot1:SIG", "green", [] ],
+    [ "esp:D35", "pot2:SIG", "green", [] ],
+    [ "esp:D32", "pot3:SIG", "green", [] ],
+    [ "esp:D33", "pot4:SIG", "green", [] ],
+    [ "pot1:VCC", "esp:3V3", "red", [] ],
+    [ "pot2:VCC", "esp:3V3", "red", [] ],
+    [ "pot3:VCC", "esp:3V3", "red", [] ],
+    [ "pot4:VCC", "esp:3V3", "red", [] ],
+    [ "pot1:GND", "esp:GND.1", "black", [] ],
+    [ "pot2:GND", "esp:GND.1", "black", [] ],
+    [ "pot3:GND", "esp:GND.1", "black", [] ],
+    [ "pot4:GND", "esp:GND.1", "black", [] ],
+    [ "esp:D21", "lcd1:SDA", "blue", [] ],
+    [ "esp:D22", "lcd1:SCL", "yellow", [] ],
+    [ "lcd1:VCC", "esp:5V", "red", [] ],
+    [ "lcd1:GND", "esp:GND.2", "black", [] ],
+    [ "esp:D25", "bz1:1", "green", [] ],
+    [ "bz1:2", "esp:GND.2", "black", [] ],
+    [ "esp:D26", "relay1:IN", "green", [] ],
+    [ "relay1:VCC", "esp:5V", "red", [] ],
+    [ "relay1:GND", "esp:GND.2", "black", [] ],
+    [ "esp:D27", "r_led:1", "green", [] ],
+    [ "r_led:2", "led_fault:A", "green", [] ],
+    [ "led_fault:C", "esp:GND.2", "black", [] ]
   ],
   "dependencies": {}
 }
