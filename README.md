@@ -184,7 +184,7 @@ Fault LED   → GPIO 27
 
 ### 🔌 Circuit Diagram & Hardware Wiring Schematic
 
-![ESP32 BMS Circuit Diagram](circuit_diagram.jpg)
+![ESP32 BMS Circuit Diagram](docs/circuit_diagram.jpg)
 
 ---
 
@@ -249,13 +249,9 @@ esp32-4cell-bms-blynk/
 ├── diagram.json
 ├── README.md
 │
-├── config/
-│   └── blynk_dashboard.json
-│
-├── docs/
-│   ├── architecture.svg
-│   ├── workflow.svg
-│   └── demo_video_link.txt
+├── architecture_diagram.jpg
+├── circuit_diagram.jpg
+├── workflow_diagram.jpg
 │
 └── screenshots/
     ├── blynk_normal.png
@@ -266,12 +262,12 @@ esp32-4cell-bms-blynk/
 
 | File | Purpose |
 |---|---|
-| `sketch.ino` | Final ESP32 firmware |
-| `diagram.json` | Wokwi circuit configuration |
-| `blynk_dashboard.json` | Blynk datastream configuration |
-| `architecture.svg` | System architecture diagram |
-| `workflow.svg` | Safety workflow diagram |
-| `blynk_normal.png` | Normal dashboard screenshot |
+| `sketch.ino` | Final ESP32 C++ firmware |
+| `diagram.json` | Wokwi circuit configuration & libraries setup |
+| `architecture_diagram.jpg` | System architecture block diagram |
+| `circuit_diagram.jpg` | Hardware wiring schematic & pinouts |
+| `workflow_diagram.jpg` | Safety logic & protection flowchart |
+| `blynk_normal.png` | Normal operating dashboard screenshot |
 | `blynk_active_fault.png` | Active fault dashboard screenshot |
 | `README.md` | Complete project documentation |
 
