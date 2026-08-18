@@ -182,34 +182,15 @@ Buzzer      → GPIO 25
 Fault LED   → GPIO 27
 ```
 
+### 🔌 Circuit Diagram & Hardware Wiring Schematic
+
+![ESP32 BMS Circuit Diagram](circuit_diagram.jpg)
+
 ---
 
 ## 🏗️ System Architecture
 
-```text
-              ┌─────────────────────┐
-              │   4 Cell Inputs     │
-              │ C1 C2 C3 C4 Voltage │
-              └──────────┬──────────┘
-                         │
-                         ▼
-              ┌─────────────────────┐
-              │       ESP32         │
-              │ ADC + Processing    │
-              └──────────┬──────────┘
-                         │
-             ┌───────────┴───────────┐
-             ▼                       ▼
-   ┌──────────────────┐    ┌──────────────────┐
-   │ Battery Analytics│    │ Safety Protection│
-   │ Min/Max/Avg/Spread│   │ UVP / OVP / Relay│
-   └─────────┬────────┘    └─────────┬────────┘
-             │                       │
-             ▼                       ▼
-   ┌──────────────────┐    ┌──────────────────┐
-   │  Blynk Dashboard  │    │ LCD / Buzzer / LED│
-   └──────────────────┘    └──────────────────┘
-```
+![BMS System Architecture](architecture_diagram.jpg)
 
 ---
 
