@@ -117,7 +117,7 @@ The Blynk dashboard provides:
 
 The normal dashboard demonstrates all four cells operating inside the defined safe range (1.5V – 2.5V).
 
-![Normal Blynk Dashboard](screenshots/blynk_normal.png)
+![Normal Blynk Dashboard](screenshots/Blynk_Dashboard.png)
 
 ### Active Fault State
 
