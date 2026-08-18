@@ -123,7 +123,7 @@ The normal dashboard demonstrates all four cells operating inside the defined sa
 
 For fault testing, cells are driven outside the safe voltage range. The dashboard updates in real time to display multi-cell fault codes (e.g. `C1:OV C2:UV`), `PackState: 2`, and `RelayState: 0`.
 
-![Active Fault Blynk Dashboard](screenshots/blynk_active_fault.png)
+![Active Fault Blynk Dashboard](screenshots/Active_Fault_Blynk_Dashboard.png)
 
 > **Note:** Live Blynk access is not publicly exposed through the repository. Dashboard screenshots are provided for evaluation. A live demonstration can be provided separately if required.
 
