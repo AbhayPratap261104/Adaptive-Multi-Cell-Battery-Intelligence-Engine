@@ -215,36 +215,7 @@ Fault LED   → GPIO 27
 
 ## 🔄 Operating Workflow
 
-```text
-Start
-  ↓
-Initialize ESP32 Peripherals
-  ↓
-Connect to Wi-Fi / Blynk IoT
-  ↓
-Read four cell voltages (20ms interval)
-  ↓
-Calculate Min / Max / Average / Spread
-  ↓
-Check UVP (< 1.5V) & OVP (> 2.5V) conditions
-  ↓
-┌─────────────────────────────┐
-│ Is a critical fault present?│
-└──────────────┬──────────────┘
-       No      │       Yes
-       ↓       │        ↓
- Normal State  │   50ms Fast Trip Debounce
-       ↓       │        ↓
- Relay Closed  │   Relay Cutoff (OPEN)
-       ↓       │        ↓
- Active Faults │   Buzzer Alarm + Red LED
- = "No Faults" │        ↓
-       ↓       │   Active Faults = "C1:OV C2:UV"
- Blynk Update  │        ↓
-       └───────┴──→ Blynk Dashboard Update
-                         ↓
-                    Repeat Cycle
-```
+![BMS Operating Workflow](workflow_diagram.jpg)
 
 ---
 
