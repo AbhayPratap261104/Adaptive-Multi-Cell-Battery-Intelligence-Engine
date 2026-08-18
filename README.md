@@ -276,7 +276,7 @@ esp32-4cell-bms-blynk/
 ## ▶️ Wokwi Simulation
 
 **Public Wokwi Project:**  
-https://github.com/AbhayPratap261104/Adaptive-Multi-Cell-Battery-Intelligence-Engine
+https://wokwi.com/projects/468256358141355009
 
 The Wokwi simulation demonstrates the complete monitoring and protection workflow using potentiometers as simulated cell-voltage inputs.
 
