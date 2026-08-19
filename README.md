@@ -243,19 +243,25 @@ Risk & Action = Immediate Relay Cutoff - Critical OVP/UVP!
 ## 📁 Repository Structure
 
 ```text
-esp32-4cell-bms-blynk/
+Adaptive-Multi-Cell-Battery-Intelligence-Engine/
 │
 ├── sketch.ino
 ├── diagram.json
 ├── README.md
 │
-├── architecture_diagram.jpg
-├── circuit_diagram.jpg
-├── workflow_diagram.jpg
+├── docs/
+│   ├── architecture_diagram.jpg
+│   ├── circuit_diagram.jpg
+│   └── workflow_diagram.jpg
+│
+├── links/
+│   ├── Demo Video.md
+│   └── Wokwi Project Link.md
 │
 └── screenshots/
-    ├── blynk_normal.png
-    └── blynk_active_fault.png
+    ├── Active_Fault_Blynk_Dashboard.png
+    ├── Blynk_Dashboard.png
+    └── Wokwi_Circuit.jpeg
 ```
 
 ### File Description
