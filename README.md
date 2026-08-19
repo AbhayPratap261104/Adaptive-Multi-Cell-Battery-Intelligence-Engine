@@ -339,4 +339,4 @@ It is **not a production automotive or commercial BMS**. A production BMS would 
 |---|---|
 | GitHub Repository | https://github.com/AbhayPratap261104/Adaptive-Multi-Cell-Battery-Intelligence-Engine |
 | Wokwi Simulation | https://wokwi.com/projects/468256358141355009 |
-| Demo Video | `PASTE_LOOM_OR_MP4_LINK_HERE` |
+| Demo Video | https://drive.google.com/file/d/1xjIRov6p5t6_QXmnBLOJ9EQpTLP-iyRf/view?usp=drive_link |
